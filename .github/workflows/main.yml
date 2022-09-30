@@ -2,13 +2,13 @@ name: AutoSignIn
 on:
     schedule:
     #UTC时间18点对应北京时间2点
-        - cron: '5 16 * * *'
+    - cron: '15 16 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup
         uses: actions/setup-python@v4
         with:
