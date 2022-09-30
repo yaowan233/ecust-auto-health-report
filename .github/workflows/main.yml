@@ -2,7 +2,7 @@ name: AutoSignIn
 on:
   push:
   schedule:
-    - cron: '15 16 * * *'
+    - cron: '15 18 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
