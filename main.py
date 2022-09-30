@@ -52,9 +52,9 @@ for i in data:
             run(playwright, account.strip(), password.strip())
     except Terror:
         print('健康打卡失败，可能已自行打卡，请注意需自行填写')
+        raise
     except Exception as e:
         print(f'健康打卡失败 错误原因{e}')
+        raise
     else:
         print(f'{account} 今日已完成健康打卡')
-
-
