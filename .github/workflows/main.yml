@@ -1,8 +1,7 @@
 name: AutoSignIn
 on:
-    push:
-    schedule:
-    #UTC时间18点对应北京时间2点
+  push:
+  schedule:
     - cron: '15 16 * * *'
 jobs:
   build:
@@ -17,6 +16,8 @@ jobs:
       - name: Install
         run:
             pip install -r requirements.txt
+      - name: Install playwright
+        run:
             playwright install
       - name: Run
         env:
