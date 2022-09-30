@@ -2,7 +2,7 @@ name: AutoSignIn
 on:
     schedule:
     #UTC时间18点对应北京时间2点
-    - cron: '30 8 * * *'
+        - cron: '5 16 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
