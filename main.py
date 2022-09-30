@@ -46,13 +46,14 @@ data = os.environ.get('ACCOUNT').split(';')  # 字符串预处理
 
 for i in data:
     account, password = i.split(',')
+    print(account, password)
     try:
         with sync_playwright() as playwright:
             run(playwright, account.strip(), password.strip())
     except Terror:
         print('健康打卡失败，可能已自行打卡，请注意需自行填写')
     except Exception as e:
-        print('健康打卡失败 错误原因{e}')
+        print(f'健康打卡失败 错误原因{e}')
     else:
         print(f'{account} 今日已完成健康打卡')
 
