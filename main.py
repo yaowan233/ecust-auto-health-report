@@ -8,19 +8,23 @@ def run(playwright: Playwright, stu_id, password) -> None:
     context = browser.new_context()
     # Open new page
     page = context.new_page()
-    page.on("response", lambda response: print("<<", response.text(), response.url))
     page.goto(
         "https://sso.ecust.edu.cn/authserver/login?service=https%3A%2F%2Fworkflow.ecust.edu.cn%2Fdefault%2Fwork%2Fuust%2Fzxxsmryb%2Fmrybcn.jsp")
     # Click [placeholder="用户名"]
     page.click("[placeholder=\"用户名\"]")
+    print(1)
     # Fill [placeholder="用户名"]
     page.fill("[placeholder=\"用户名\"]", stu_id)
+    print(2)
     # Click [placeholder="密码"]
     page.click("[placeholder=\"密码\"]")
+    print(3)
     # Fill [placeholder="密码"]
     page.fill("[placeholder=\"密码\"]", password)
+    print(4)
     # Click button:has-text("登录")
     page.click("button:has-text(\"登录\")")
+    print(5)
     # assert page.url == "https://workflow.ecust.edu.cn/default/work/uust/zxxsmryb/mrybcn.jsp"
     # Click ins
     page.click("ins")
