@@ -1,5 +1,6 @@
 name: AutoSignIn
 on:
+    push:
     schedule:
     #UTC时间18点对应北京时间2点
     - cron: '15 16 * * *'
