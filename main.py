@@ -11,16 +11,16 @@ def run(playwright: Playwright, stu_id, password) -> None:
     page.goto(
         "https://sso.ecust.edu.cn/authserver/login?service=https%3A%2F%2Fworkflow.ecust.edu.cn%2Fdefault%2Fwork%2Fuust%2Fzxxsmryb%2Fmrybcn.jsp")
     # Click [placeholder="用户名"]
-    page.click("[placeholder=\"用户名\"]")
+    page.click("#username")
     print(1)
     # Fill [placeholder="用户名"]
-    page.fill("[placeholder=\"用户名\"]", stu_id)
+    page.fill("#username", stu_id)
     print(2)
     # Click [placeholder="密码"]
-    page.click("[placeholder=\"密码\"]")
+    page.click("#password")
     print(3)
     # Fill [placeholder="密码"]
-    page.fill("[placeholder=\"密码\"]", password)
+    page.fill("#password", password)
     print(4)
     # Click button:has-text("登录")
     page.click("button:has-text(\"登录\")")
@@ -51,7 +51,6 @@ data = os.environ.get('ACCOUNT').split(';')  # 字符串预处理
 
 for i in data:
     account, password = i.split(',')
-    print(account, password)
     try:
         with sync_playwright() as playwright:
             run(playwright, account.strip(), password.strip())
