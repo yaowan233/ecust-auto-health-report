@@ -4,7 +4,7 @@ import os
 
 
 def run(playwright: Playwright, stu_id, password) -> None:
-    browser = playwright.chromium.launch()
+    browser = playwright.chromium.launch(headless=True)
     context = browser.new_context()
     # Open new page
     page = context.new_page()
