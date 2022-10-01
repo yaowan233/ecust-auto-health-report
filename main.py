@@ -50,4 +50,4 @@ for i in data:
         print(f'健康打卡失败 错误原因{e}')
         raise
     else:
-        print(f'{account} 今日已完成健康打卡')
+        print(f'今日已完成健康打卡')
