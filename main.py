@@ -15,7 +15,6 @@ def run(playwright: Playwright, stu_id, password) -> None:
     page.click("#password")
     page.fill("#password", password)
     page.locator('button').click()
-    print(5)
     # Click ins
     page.click("ins")
     # Click text=下一步
