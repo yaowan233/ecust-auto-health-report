@@ -12,7 +12,7 @@
 ![image](https://user-images.githubusercontent.com/30517062/193273198-e08ef3ec-0912-441e-a334-eb8731aca9c6.png)
 ### 3. `Name` 处输入 `ACCOUNT` ，`Secret`处输入你的学号与信息办密码
 具体格式为`学号 密码 学号 密码 ...`。例如`19001234 jkl123456`(单人使用)和`20001111 abc123456 21001235 efg987645 22001234 asd147258`(多人使用)。**注意：你的密码不能是S+身份证后8位，若是，请登录[华理信息办](https://i.ecust.edu.cn/)，点右上角登入后自行修改密码。**
-![image](https://user-images.githubusercontent.com/30517062/193273739-632909dd-aaf6-4fc0-84cd-6b3cecbd62a5.png)
+![image](https://user-images.githubusercontent.com/88281489/193488075-597fe4b5-7a34-483d-af0a-0c35bf277cc0.png)
 最后点击 `Add secret`
 ### 4. 启动workflow
 按下图点击。确保打开workflow
