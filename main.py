@@ -36,10 +36,9 @@ def run(playwright: Playwright, stu_id, password) -> None:
     browser.close()
 
 
-data = os.environ.get('ACCOUNT').split(';')  # 字符串预处理
+data = os.environ.get('ACCOUNT').split(' ')  # 字符串预处理
 
-for i in data:
-    account, password = i.split(',')
+for account, password in data:
     try:
         with sync_playwright() as playwright:
             run(playwright, account.strip(), password.strip())
