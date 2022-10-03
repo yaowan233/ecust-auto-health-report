@@ -36,9 +36,9 @@ def run(playwright: Playwright, stu_id, password) -> None:
     browser.close()
 
 
-data = os.environ.get('ACCOUNT').strip().split(' ')  # 字符串预处理
+data = os.environ.get('ACCOUNT').strip().split()  # 字符串预处理
 
-for i in range(0,len(data), 2):
+for i in range(0, len(data), 2):
     account = data[i]
     password = data[i+1]
     try:
